@@ -16,3 +16,28 @@ for (let index = 0; index < numbers.length; index++) {
 }
 // this will print [2, 8, 4, 10]
 console.log(evenNumbers);
+
+let numbers = [7, 2, 3, 8, 11, 1, 4, 15, 10];
+
+let evenNumbers = [];
+
+// declare a function 
+const getEvenNumbers = function (number) {
+    if (number % 2 === 0) {
+        evenNumbers.push(number);
+    }
+}
+// call the forEach method on the numbers array with the function as the argument
+numbers.forEach(getEvenNumbers);
+console.log(evenNumbers);
+
+let numbers = [7, 2, 3, 8, 11, 1, 4, 15, 10];
+
+let evenNumbers = [];
+
+numbers.forEach(number => {
+    if (number % 2 === 0) {
+        evenNumbers.push(number);
+    } 
+});
+console.log(evenNumbers);
