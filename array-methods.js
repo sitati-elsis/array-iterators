@@ -51,3 +51,55 @@ const doubleNumbers = function (list) {
     });
 }
 console.log(doubleNumbers(numbers)); // this will print the squared value of each element in the array
+
+let numbers = [7, 2, 3, 8, 11, 1, 4, 15, 10];
+const doubleNumbers = function (list) {
+    // square each element of the array and store it in the result variable
+    let result = numbers.map(number => {
+        return number ** 2;
+    });
+
+    return result;
+}
+console.log(doubleNumbers(numbers)); // this will return [ 49, 4, 9, 64, 121, 1, 16, 225, 100 ]
+
+let numbers = [7, 2, 3, 8, 11, 1, 4, 15, 10];
+
+const doubleNumbers = function (list) {
+    // declare an empty array
+    let newArray = [];
+    // loop through every element in the list array
+    for (let index = 0; index < list.length; index ++){
+        // append the element that has been squared to newArray 
+        newArray.push(list[index] ** 2);
+    }
+    return newArray;
+}
+console.log(doubleNumbers(numbers)); // this will return [ 49, 4, 9, 64, 121, 1, 16, 225, 100 ]
+
+
+let numbers = [7, 2, 3, 8, 11, 1, 4, 15, 10];
+const squareNumbers = function (list) {
+    // square each element of the array and store it in the result variable
+    let result = numbers.map(number => {
+        return number ** 2;
+        //log to the console every element of the new array
+    }).forEach(element => {
+        console.log(element);
+    });
+
+    return result;
+}
+// this will log every element in the numbers array which is now squared
+squareNumbers(numbers);
+
+let numbers = [7, 2, 3, 35, 11, 1, 4, 15, 10];
+// function that checks mulitples of 5
+const getMultiplesOfFive = function (list) {
+    return list.filter(number => {
+        // check to see wether a number is a multiple of 5
+        return number % 5 === 0;
+    });
+}
+// this will return [ 35, 15, 10 ]
+console.log(getMultiplesOfFive(numbers));
