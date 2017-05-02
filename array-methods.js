@@ -103,3 +103,31 @@ const getMultiplesOfFive = function (list) {
 }
 // this will return [ 35, 15, 10 ]
 console.log(getMultiplesOfFive(numbers));
+
+
+let numbers = [7, 2, 3, 35, 11, 1, 4, 15, 10];
+
+// a function that checks whether a number is prime or not
+const checkIsPrime = function (number) {
+    // any number that is less than two is not a prime number
+    if (number <= 1) {
+        return false;
+    }
+    // check to see if the number has a factor
+    for (divisor = 2; divisor < number; divisor++) {
+        if (number % divisor === 0) {
+            return false
+        }
+    }
+    // the number is prime if there are no other factors
+    return true;
+}
+
+// function that returns prime numbers 
+const getPrimeNumbers = function (list) {
+    // return an array of only prime numbers
+    return list.filter(checkIsPrime);
+}
+
+// this will return [ 7, 2, 3, 11 ]
+console.log(getPrimeNumbers(numbers));
