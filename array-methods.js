@@ -131,3 +131,15 @@ const getPrimeNumbers = function (list) {
 
 // this will return [ 7, 2, 3, 11 ]
 console.log(getPrimeNumbers(numbers));
+
+let numbers = [7, 2, 3, 35, 11, 1, 9, 15, 10];
+
+// function to check if there is any even number in an array
+const isThereEven = function (list) {
+    // condition for determining a number is even
+    return list.some(number => {
+        return number % 2 === 0;
+    });
+}
+// this will return true
+console.log(isThereEven(numbers));
