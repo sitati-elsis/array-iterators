@@ -156,3 +156,16 @@ const areAllEven = function (list) {
 // this will return false
 console.log(areAllEven(numbers));
 
+
+let numbers = [1, 2, 3, 4, 5];
+
+const performSum = function (list) {
+    return list.reduce((sum, number) => {
+        console.log("sum is now " + sum + " while number is now " + number);
+        // the result of this addition is sent to the next function call as sum
+        return sum + number;
+    }, 0);
+}
+
+// this will return 15
+console.log(performSum(numbers));
